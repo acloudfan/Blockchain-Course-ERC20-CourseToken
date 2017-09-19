@@ -1,0 +1,119 @@
+{
+  "contract_name": "CourseToken",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "initSupply",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "payable": false,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b604051602080610408833981016040528080519150505b6000818155600160a060020a03331681526001602052604090208190555b505b6103b3806100556000396000f3006060604052361561006a5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306fdde03811461008057806318160ddd1461010b578063313ce5671461013057806395d89b4114610159578063a9059cbb146101e4575b341561007557600080fd5b61007e5bfe5b5b565b005b341561008b57600080fd5b610093610227565b60405160208082528190810183818151815260200191508051906020019080838360005b838110156100d05780820151818401525b6020016100b7565b50505050905090810190601f1680156100fd5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561011657600080fd5b61011e61025e565b60405190815260200160405180910390f35b341561013b57600080fd5b610143610264565b60405160ff909116815260200160405180910390f35b341561016457600080fd5b610093610269565b60405160208082528190810183818151815260200191508051906020019080838360005b838110156100d05780820151818401525b6020016100b7565b50505050905090810190601f1680156100fd5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156101ef57600080fd5b61021373ffffffffffffffffffffffffffffffffffffffff600435166024356102a0565b604051901515815260200160405180910390f35b60408051908101604052601181527f4441505020436f7572736520546f6b656e000000000000000000000000000000602082015281565b60005481565b600281565b60408051908101604052600381527f4443540000000000000000000000000000000000000000000000000000000000602082015281565b600080821180156102d6575073ffffffffffffffffffffffffffffffffffffffff33166000908152600160205260409020548290105b156102e357506000610381565b73ffffffffffffffffffffffffffffffffffffffff338181166000908152600160205260408082208054879003905592861681528290208054850190557fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef91859085905173ffffffffffffffffffffffffffffffffffffffff9384168152919092166020820152604080820192909252606001905180910390a15060015b929150505600a165627a7a723058206fe0731cbb17c7343ca0f1d0c92bad3d94335bd527fbed95a052e40a33a9a8070029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1505756686206
+}
