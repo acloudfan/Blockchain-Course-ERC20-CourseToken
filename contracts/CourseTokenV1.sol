@@ -9,13 +9,20 @@ pragma solidity ^0.4.4;
  *       This version will not be ERC20 compliant as it does not implement all specs funcs/events
  * V2 >> Supports the approve/transferFrom & allowance function
  * V3 >> Add some admin functions that only the owner of the coin can execute
+ * 
+ * Walkthrough is in Section#9 of course
  */
 contract CourseTokenV1 {
 
   // 1. Declare the metadata for the coin
   //    All of thse variables declared public constant - so available as functions
+
   string public constant name = "DAPP Course Token";
   string public constant symbol = "DCT";
+
+  // Token values are passed as integers so decimals is the number of decimals from righ
+  // E.g., decimals = 2, value=100 interpretted as 1.00
+  // E.g., decimals = 1, value=100 interpretted as 10.0
   uint8  public constant decimals = 0;
 
   // 6. Declare the event
@@ -41,7 +48,7 @@ contract CourseTokenV1 {
 
   // 5. transfer
   function transfer(address _to, uint256 _value) returns (bool success) {
-    // Throw an exception of the if specified value is less than the balance available
+    // Return false if specified value is less than the balance available
     if(_value > 0  && balances[msg.sender] < _value) {
       return false;
     }
