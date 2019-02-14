@@ -24,7 +24,7 @@ contract CourseTokenV1 {
   // Token values are passed as integers so decimals is the number of decimals from righ
   // E.g., decimals = 2, value=100 interpretted as 1.00
   // E.g., decimals = 1, value=100 interpretted as 10.0
-  uint8  public constant decimals = 0;
+  uint8  public constant decimals = 2;
 
   // 6. Declare the event
   event Transfer(address _from, address _to, uint256 _value);
@@ -50,9 +50,7 @@ contract CourseTokenV1 {
   // 5. transfer
   function transfer(address _to, uint256 _value) public returns (bool success) {
     // Return false if specified value is less than the balance available
-    if(_value > 0  && balances[msg.sender] < _value) {
-      return false;
-    }
+    require((_value > 0  && balances[msg.sender] > _value), "Return false if specified value is less than the balance available");
 
     // Reduce the balance by _value
     balances[msg.sender] -= _value;
