@@ -12,6 +12,7 @@ pragma solidity ^0.4.4;
  * 
  * Walkthrough is in Section#9 of course
  */
+ //Solidity 0.5
 contract CourseTokenV1 {
 
   // 1. Declare the metadata for the coin
